@@ -1,0 +1,84 @@
+header
+    &.title
+        display block
+
+        a
+            $bg($blackHeader)
+            $position(fixed, 13px, false, false, 13px)
+            color $white
+            display block
+            padding 9px 12px 6px
+            transition background .6s ease-out
+
+            &:hover
+                $bg($blueSelected)
+                color $white
+
+                .logo-text
+                    .logo-un
+                        color $blackHeader
+                        transition color .6s ease-out
+
+            img
+                display inline-block
+                vertical-align middle
+                width 30px
+
+            .logo-text
+                $font('Montserrat')
+                font-weight $fontWeightBold
+                vertical-align middle
+
+                .logo-un
+                    color $blueUnReactor
+
+                .logo-reactor
+                    margin-left -4px
+
+.mainnav
+    $position(absolute, 0, 20px)
+    z-index 200
+
+    .navwrap
+        &:hover
+            .menu
+                opacity 1
+
+            .toggle
+                opacity 1
+
+    .menu
+        display inline-block
+        list-style none
+        margin 0
+        opacity 0
+        padding 0
+        transition opacity .4s ease-out
+
+        li
+            $position(relative)
+            display inline-block
+            margin 0
+            padding 0
+
+            &:hover
+                a
+                    color $blackLinkHover
+
+            a
+                color $grayLink
+                display block
+                font-size .88em
+                padding 30px 10px
+                text-transform uppercase
+
+    .toggle
+        display inline-block
+        opacity .6
+        padding 30px 10px 30px 15px
+        transition opacity .1s ease-out
+
+        i
+            color $almostBlack
+            font-size 1.5em
+            vertical-align middle

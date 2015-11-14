@@ -1,0 +1,164 @@
+/* Utils */
+$bg($color = transparent)
+    background $color
+
+$bgImage($url, $repeat = no-repeat)
+    background-image url($url)
+    background-repeat $repeat
+
+$blackRgba($opacity = 1)
+    background-color rgba(0, 0, 0, $opacity)
+
+$cover()
+    background-size cover
+
+$resetElement()
+    border none
+    margin 0
+    padding 0
+
+$clearfix()
+    *zoom 1
+    &:after
+        content ''
+        display block
+        clear both
+        height 0
+
+$position($position, $args...)
+    position $position
+
+    if length($args) == 4
+        if $args[0] != false
+            top $args[0]
+
+        if $args[1] != false
+            right $args[1]
+
+        if $args[2] != false
+            bottom $args[2]
+
+        if $args[3] != false
+            left $args[3]
+    else if length($args) == 3
+        if $args[0] != false
+            top $args[0]
+
+        if $args[1] != false
+            right $args[1]
+
+        if $args[2] != false
+            bottom $args[2]
+    else if length($args) == 2
+        if $args[0] != false
+            top $args[0]
+
+        if $args[1] != false
+            right $args[1]
+    else if length($args) == 1
+        if $args[0] != false
+            top $args[0]
+
+$font($font)
+    font-family $font, sans-serif
+
+$capitalize()
+    text-transform capitalize
+
+$uppercase()
+    text-transform uppercase
+
+$lowercase()
+    text-transform lowercase
+
+$italic()
+    font-style italic
+
+$centerWithMargin($width = 100%)
+    display block
+    margin 0 auto
+    width $width
+
+$center()
+    margin 0 auto
+
+$hide()
+    display none
+
+$noContent()
+    content ''
+    background transparent
+
+$noBorder()
+    border none
+
+$noDisplay()
+    display none
+
+$noSelect()
+    outline none
+    touch-callout none
+    user-select none
+
+$pointer()
+    cursor pointer
+
+/* Font Awesome */
+$fa($code, $size = 1em, $color = $blueDevWay, $bgColor = transparent)
+    background-color $bgColor
+    color $color
+    content $code
+    font-family FontAwesome
+    font-size $size
+
+/* Borders */
+$border($color = red)
+    border 1px solid $color
+
+$borderRadius($radius = 5px, $args...)
+    if length($args) == 3
+        border-top-right-radius $radius
+        border-bottom-right-radius $args[0]
+        border-bottom-left-radius $args[1]
+        border-top-left-radius $args[2]
+    else if length($args) == 2
+        border-top-right-radius $radius
+        border-bottom-right-radius $args[0]
+        border-bottom-left-radius $args[1]
+    else if length($args) == 1
+        border-top-right-radius $radius
+        border-bottom-right-radius $args[0]
+    else
+        border-radius $radius
+
+/* BoxShadow */
+$boxShadow($h = 2px, $v = 2px, $blur = 2px, $opacity = 0.3, $inset = false)
+    if (!$inset)
+        box-shadow $h $v $blur rgba(0, 0, 0, $opacity)
+    else
+        box-shadow inset $h $v $blur rgba(0, 0, 0, $opacity)
+
+/* Filters */
+$grayscale($percentage)
+    filter grayscale($percentage)
+    -webkit-filter grayscale($percentage)
+    -o-filter grayscale($percentage)
+    -moz-filter grayscale($percentage)
+    -ms-filter grayscale($percentage)
+
+/* Lists */
+$resetUl()
+    margin 0
+    padding 0
+    list-style none
+
+/* Images */
+$retina($image, $extension = 'png')
+    background-image url($image'.'$extension)
+
+    @media (min-device-pixel-ratio: 2),
+           (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx)
+        background-image url($image'_2x.'$extension)
+        background-size cover

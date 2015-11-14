@@ -46,7 +46,10 @@ module.exports = function(grunt) {
         watch: {
             stylus: {
                 files: ['public/stylus/**/*.styl'],
-                tasks: ['stylus', 'autoprefixer', 'cssmin']
+                tasks: ['stylus', 'autoprefixer', 'cssmin'],
+                options: {
+                    livereload: true
+                }
             }
         },
     });

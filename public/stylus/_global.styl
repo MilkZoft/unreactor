@@ -1,0 +1,36 @@
+body
+    $bg($white)
+    $font('Open Sans')
+    color $blackUnReactor
+    height 100%
+    margin 0
+    overflow-x hidden
+    padding 0
+
+h1,
+h2,
+h3,
+h4
+    color $headerBlack
+    font 700 34px Domine,Serif
+    line-height 56px
+
+h1
+    a
+        &:hover
+            border-bottom 3px solid $gray
+
+a
+    color $blueSelected
+    border-bottom 3px solid transparent
+    font-weight $fontWeightBold
+    text-decoration none
+    transition border .2s,color .2s ease-out
+
+p
+    color $strongGray
+    line-height 38px
+    word-wrap break-word
+
+.hide
+    $hide()

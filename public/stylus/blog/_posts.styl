@@ -1,0 +1,100 @@
+.posts
+    $center()
+    max-width 760px
+    padding-top 50px
+    width 90%
+
+    .post
+        border-bottom 1px solid $almostLightGray
+        padding 50px 0
+
+        header
+            $position(relative)
+            display block
+
+            i
+                margin 0 5px
+
+            .feature
+                $bg($white)
+                $borderRadius(4px)
+                $position(absolute, false, 0)
+                color $featuredGreen
+                display inline-block
+                padding 7px 15px
+
+                &:hover
+                    span
+                        display inline
+                        opacity 1
+
+                span
+                    margin-right 15px
+                    opacity 0
+
+        h2
+            $font('Open Sans')
+            font-size 1.3em
+            margin 0
+
+            a
+                color $whiteGray
+
+                &:hover
+                    color $blackGray
+
+        h1
+            margin 20px 0
+
+            a
+                $position(relative)
+                color $headerBlack
+                padding 10px 0
+
+                &:hover
+                    color $blueHover
+
+        span
+            color $lightGray
+
+            &.postauthor
+                a
+                    img
+                        $borderRadius(20px)
+                        display inline-block
+                        height 20px
+                        margin 0 6px 0 11px
+                        width 20px
+                        vertical-align -4px
+
+            time
+                font-weight $fontWeightBold
+                color $blueSelected
+
+        p
+            margin 30px 0 0
+            overflow hidden
+
+    .pagination
+        border-bottom 1px solid $almostLightGray
+        overflow hidden
+        padding 50px 0
+
+        a
+            $bg($white)
+            $borderRadius(4px)
+            border 2px solid $lightGray
+            color $grayLink
+            float right
+            font-size .9em
+            display inline-block
+            padding 11px 26px
+            transition all .2s ease-in-out
+
+            &:hover
+                $bg($blueUnReactor)
+                border-color $blueUnReactor
+                color $white
+
+            i
+                margin 0 0 0 15px

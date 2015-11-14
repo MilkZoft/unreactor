@@ -1,4 +1,5 @@
-body
+body,
+html
     $bg($white)
     $font('Open Sans')
     color $blackUnReactor
@@ -7,9 +8,9 @@ body
     overflow-x hidden
     padding 0
 
-h1,
-h2,
-h3,
+h1
+h2
+h3
 h4
     color $headerBlack
     font 700 34px Domine,Serif
@@ -31,6 +32,30 @@ p
     color $strongGray
     line-height 38px
     word-wrap break-word
+
+blockquote
+    border-left 3px solid $lightGray
+    font italic $fontWeightBold 1.2em Domine,Serif
+    line-height 38px
+    margin 30px 0 30px 4%
+    padding 5px 4%
+
+    p
+        margin 0
+        padding 0
+
+img
+    $borderRadius(4px)
+    max-width 100%
+    margin 30px 0
+    width auto
+
+hr
+    $bg($almostLightGray)
+    border 0
+    height 3px
+    margin 30px auto
+    width 70%
 
 .hide
     $hide()

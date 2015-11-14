@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <link rel="shortcut icon" href="public/images/ico/logo.ico" type="image/x-icon">
+        <title>Getting Started with Yeoman & Grunt | unReactor - Learn to Code</title>
+        <link href="public/css/style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header class="title">
+            <a href="index.html">
+                <img src="public/images/logo-w.png" />
+                <span class="logo-text">
+                    <span class="logo-un">UN</span>
+                    <span class="logo-reactor">Reactor</span>
+                </span>
+            </a>
+        </header>
+        <nav class="mainnav single-post">
+            <div class="navwrap">
+                <ul class="menu">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Featured Post</a>
+                    </li>
+                    <li>
+                        <a href="#">Buy Astro</a>
+                    </li>
+                </ul>
+                <div class="toggle">
+                    <a href="#">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="cover">
+            <div class="background" style="background-image: url(public/images/desk.jpg)"></div>
+            <header>
+                <h2>
+                    <a href="#">Developer Workflow</a>
+                </h2>
+                <h1>Getting Started with Yeoman & Grunt</h1>
+                <span class="meta">
+                    Posted
+                    <span class="postauthor">
+                        by <a href="#">Manuel Sánchez</a></span> on <i class="fa fa-clock-o"></i><time> November 19th, 2015</time>.
+                </span>
+            </header>
+            <i class="fa fa-chevron-down movedown"></i>
+        </div>
+        <section class="post">
+            <article>
+                <section class="postbody">
+                    <p>
+                        Why use Grunt? In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
+                    </p>
+                    <blockquote>
+                        <p>Grunt is a task-based command line build tool for JavaScript projects.</p>
+                    </blockquote>
+                    <p>
+                        The Grunt ecosystem is huge and it's growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. If someone hasn't already built what you need, authoring and publishing your own Grunt plugin to npm is a breeze.
+                    </p>
+                    <div class="container">
+                        <img src="public/images/gruntjs.jpg" alt="">
+                        <div class="reference">
+                            <strong>GruntJS</strong>
+                            <p>
+                                Grunt is built on Node.js, and it’s available as a package via the Node package manager (npm).
+                            </p>
+                        </div>
+                    </div>
+                    <h2>Installing the CLI</h2>
+                    <p>
+                        In order to get started, you'll want to install Grunt's command line interface (CLI) globally. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this.
+                    </p>
+                    <pre>
+                        <code>npm install -g grunt-cli
+                        </code>
+                    </pre>
+                    <p>
+                        This will put the <code>grunt</code> command in your system path, allowing it to be run from any directory. Note that installing <code>grunt-cli</code> does not install the Grunt task runner! The job of the Grunt CLI is simple: run the version of Grunt which has been installed next to a <code>Gruntfile</code>. This allows multiple versions of Grunt to be installed on the same machine simultaneously.
+                    </p>
+                    <h2>Working with an existing Grunt project</h2>
+                    <p>
+                        Assuming that the Grunt CLI has been installed and that the project has already been configured with a package.json and a Gruntfile, it's very easy to start working with Grunt:
+                    </p>
+                    <ol>
+                        <li>Change to the project's root directory.  </li>
+                        <li>Install project dependencies with npm install.  </li>
+                        <li>Run Grunt with grunt.</li>
+                    </ol>
+                    <p>
+                        That's really all there is to it. Installed Grunt tasks can be listed by running grunt --help but it's usually a good idea to start with the project's documentation.
+                    </p>
+                    <hr>
+                    <p>
+                        This extract of text has been used as a demonstration of the Astro Ghost Theme. For more information on Grunt, see <a href="http://gruntjs.com">http://gruntjs.com</a>.
+                    </p>
+                </section>
+                <footer>
+                    <ul class="share">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>Google+
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="tags">
+                        <a href="#">Developer Workflow</a>
+                    </ul>
+                </footer>
+                <div class="postprofile">
+                    <img src="public/images/author.png" class="author" alt="@msanchezp11">
+                    <div class="info">
+                        <h4>Manuel Sánchez</h4>
+                        <a href="http://ecko.me">http://ecko.me</a>
+                        <p>Manuel Sánchez has built a career and reputation by breaking the rules. Harvey's shoot-from-the-hip style has made him an effective lawyer and a slick character. </p>
+                        <ul class="social">
+                            <li><a href="http://twitter.com/" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://facebook.com/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="http://github.com/" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+                            <li><a href="http://plus.google.com/" class="googleplus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="http://instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <div class="copyright">Copyright © <a href="#">UNReactor</a>. 2015 • All rights reserved.</div>
+        </footer>
+    </body>
+    <script type="text/javascript" src="public/js/device.js"></script>
+</html>

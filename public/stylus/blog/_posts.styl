@@ -32,48 +32,48 @@
                     margin-right 15px
                     opacity 0
 
-        h2
-            $font('Open Sans')
-            font-size 1.3em
-            margin 0
+            h2
+                $font('Open Sans')
+                font-size 1.3em
+                margin 0
 
-            a
-                color $whiteGray
-
-                &:hover
-                    color $blackGray
-
-        h1
-            margin 20px 0
-
-            a
-                $position(relative)
-                color $headerBlack
-                padding 10px 0
-
-                &:hover
-                    color $blueHover
-
-        span
-            color $lightGray
-
-            &.postauthor
                 a
-                    img
-                        $borderRadius(20px)
-                        display inline-block
-                        height 20px
-                        margin 0 6px 0 11px
-                        width 20px
-                        vertical-align -4px
+                    color $whiteGray
 
-            time
-                font-weight $fontWeightBold
-                color $blueSelected
+                    &:hover
+                        color $blackGray
 
-        p
-            margin 30px 0 0
-            overflow hidden
+            h1
+                margin 20px 0
+
+                a
+                    $position(relative)
+                    color $headerBlack
+                    padding 10px 0
+
+                    &:hover
+                        color $blueHover
+
+            span
+                color $lightGray
+
+                &.postauthor
+                    a
+                        img
+                            $borderRadius(20px)
+                            display inline-block
+                            height 20px
+                            margin 0 6px 0 11px
+                            width 20px
+                            vertical-align -4px
+
+                time
+                    font-weight $fontWeightBold
+                    color $blueSelected
+
+            p
+                margin 30px 0 0
+                overflow hidden
 
     .pagination
         border-bottom 1px solid $almostLightGray
@@ -98,3 +98,279 @@
 
             i
                 margin 0 0 0 15px
+
+.cover
+    $bg($headerBlack)
+    $position(relative)
+    background-image linear-gradient(#2b2b2b,#000)
+    height 100%
+    overflow hidden
+    width 100%
+
+    .background
+        $position(absolute, 0, false, false, 0)
+        background-size cover
+        height 100%
+        opacity .6
+        width 100%
+
+    header
+        $center()
+        $position(relative, 35%, false, false, auto)
+        max-width 760px
+        width 90%
+
+        h2
+            margin-top 0
+            font-size 1.4em
+            opacity .8
+
+            &:hover
+                a
+                    color $darkWhite
+
+            a
+                color $whiteGray
+                display inline-block
+
+        h1
+            $font('Domine')
+            color $white
+            font-size 3.7em
+            font-weight $fontWeightBold
+            line-height 86px
+            text-shadow 0 0 30px rgba(0,0,0,.6)
+
+        span
+            color $whiteGray
+            opacity .9
+
+            a
+            time
+                color $white
+                font-weight $fontWeightBold
+
+    .movedown
+        $position(absolute, false, false, 5%, 50%)
+        animation pulsate 4s ease-out
+        animation-iteration-count infinite
+        color $almostWhite
+        cursor pointer
+        font-size 2em
+        opacity .6
+
+.post
+    $center()
+    border-bottom 1px solid $almostLightGray
+    max-width 760px
+    padding 65px 0 25px
+    width 90%
+
+    .postbody
+        margin 0 0 30px
+
+        >p
+            &:first-child
+                color $almostBlack
+                font-weight $fontWeightBold
+                margin 40px 0 30px
+
+        .container
+            $position(relative)
+
+            img
+                margin 0
+
+            .reference
+                $position(absolute, 0, false, false, -175px)
+                border-bottom 1px solid $whiteGray
+                border-top 1px solid $whiteGray
+                padding 20px 0 10px
+                text-align right
+                width 150px
+
+                strong
+                    font-size .9em
+
+                p
+                    font-size .8em
+                    line-height 24px
+                    margin 10px 0
+
+        h2
+            font-size 1.6em
+            margin 40px 0 30px
+
+        pre
+            $bg($almostWhite)
+            $borderRadius(3px)
+            color $strongGray
+            font-size .93em
+            line-height 0
+            margin 1em 0 20px 0
+            overflow auto
+            padding 4%
+            white-space pre
+            word-wrap normal
+
+            code
+                $bg(0 0)
+                $borderRadius(0)
+                border 0
+                margin 0
+                padding 0
+
+        p
+            code
+                $border($almostLightGray)
+                $bg($white)
+                $borderRadius(3px)
+                color #333
+                margin 0 2px
+                padding 2px 10px
+
+        ol
+            line-height 38px
+            margin 30px 0 0 6%
+            padding 0
+
+            li
+                margin 10px 0
+                padding 0 0 0 3%
+
+        hr
+            height 3px
+
+    footer
+        font-size .9em
+        line-height 34px
+        margin 30px 0
+        overflow hidden
+        padding 0
+        text-align center
+        width 100%
+
+        .share
+            float left
+            list-style none
+            margin 30px 0
+            padding 0
+
+            li
+                float left
+                margin 0 15px 15px 0
+
+                a
+                    $borderRadius(4px)
+                    border 2px solid $lightGray
+                    color $headerBlack
+                    display inline-block
+                    padding 11px 26px
+
+                    i
+                        margin-right 15px
+
+        .tags
+            float right
+            margin 30px 0
+            padding 0
+            list-style none
+
+            a
+                $bg(#edebf3)
+                border 2px solid #edebf3
+                color #858585
+                display inline-block
+                padding 11px 26px
+
+    .postprofile
+        border-top 1px solid $lightGray
+        border-bottom 1px solid $lightGray
+        overflow hidden
+        margin 30px 0
+        padding 30px 0
+
+        .author
+            $borderRadius(96px)
+            display block
+            float left
+            width 12%
+
+        .info
+            display block
+            float right
+            width 82%
+
+            h4
+                $font('Open Sans')
+                margin 15px 0
+                line-height 20px
+                font-size 1.3em
+
+            p
+                font-size .9em
+                line-height 32px
+                margin 15px 0
+
+            .social
+                list-style none
+                margin 20px 0 0
+                overflow hidden
+                padding 0
+                transition all .25s ease-out
+
+                li
+                    float left
+                    margin 0 10px 10px 0
+                    padding 0
+
+                    a
+                        $borderRadius(41px)
+                        color $white
+                        display inline-block
+                        padding 9px 0
+                        text-align center
+                        transition all .25s ease-out
+                        width 40px
+
+                        &.twitter
+                            box-shadow inset 0 0 0 20px $blueTwitter
+
+                            &:hover
+                                color $blueTwitter
+                                box-shadow inset 0 0 0 2px $blueTwitter
+
+                        &.facebook
+                            box-shadow inset 0 0 0 20px $blueFacebook
+
+                            &:hover
+                                color $blueFacebook
+                                box-shadow inset 0 0 0 2px $blueFacebook
+
+                        &.github
+                            box-shadow inset 0 0 0 20px $grayGithub
+
+                            &:hover
+                                color $grayGithub
+                                box-shadow inset 0 0 0 2px $grayGithub
+
+                        &.googleplus
+                            box-shadow inset 0 0 0 20px $redGooglePlus
+
+                            &:hover
+                                color $redGooglePlus
+                                box-shadow inset 0 0 0 2px $redGooglePlus
+
+                        &.instagram
+                            box-shadow inset 0 0 0 20px $blueInstagram
+
+                            &:hover
+                                color $blueInstagram
+                                box-shadow inset 0 0 0 2px $blueInstagram
+
+                        &.linkedin
+                            box-shadow inset 0 0 0 20px $blueLinkedin
+
+                            &:hover
+                                color $blueLinkedin
+                                box-shadow inset 0 0 0 2px $blueLinkedin
